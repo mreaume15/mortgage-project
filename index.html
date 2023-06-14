@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Mortgage Calculator</title>
+  </head>
+  <body class="silver">
+    <div class="container shadow rounded-3 p-3 white my-5">
+      <h1 class="display-1 text-center">Mortgage Calculator</h1>
+      <form id="mortgage">
+        <main class="row mx-5">
+          <div class="input-field">
+            <input type="number" class="autocomplete" id="homeValue" />
+            <label>Home Value</label>
+          </div>
+          <div class="input-field">
+            <input type="number" class="autocomplete" id="downPayment" />
+            <label>Down Payment</label>
+          </div>
+          <div class="input-field">
+            <input
+              type="number"
+              class="autocomplete"
+              id="loanAmount"
+              readonly
+              placeholder="Loan Amount"
+            />
+            <label>Loan Amount</label>
+          </div>
+          <div class="input-field">
+            <input type="text" class="autocomplete" id="interestRate" />
+            <label>Interest Rate</label>
+          </div>
+          <div class="input-field">
+            <input type="number" class="autocomplete" id="loanDuration" />
+            <label>Loan Duration (years)</label>
+          </div>
+        </main>
+        <footer class="row-cols-1 align-items-center m-5">
+          <button class="btn btn-large" type="submit">Calculate</button>
+
+          <button class="btn btn-large rounded-pill orange mt-5" type="button">
+            <b style="text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2)">
+              Mon. payment: <span id="monthlyPayment"></span>
+            </b>
+          </button>
+        </footer>
+      </form>
+    </div>
+    <script src="mortgage.js"></script>
+  </body>
+</html>
